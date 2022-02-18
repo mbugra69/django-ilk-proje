@@ -11,9 +11,9 @@
 
             {% if user.is_authenticated %}
 
-                <li class="nav-item"><a class="{% url 'logout' %}" href="">Logout</a></li>
-                <li class="nav-item"><a class="nav-link" href="">Welcome</a></li
-
+                
+                <li class="nav-item"><a class="nav-link" href="">Welcome, dear {{user.get_full_name|title}}</a></li
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
             {% else %}
 
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
