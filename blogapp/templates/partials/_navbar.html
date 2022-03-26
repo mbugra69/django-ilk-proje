@@ -1,10 +1,10 @@
 <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
     <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}" >Blogapp</a>
+    <a class="navbar-brand" href="{% url 'home' %}" >Metin Buğra KÖKSAL</a>
         <ul class="navbar-nav me-auto">
 
-            <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
             
         </ul>
         <ul class="navbar-nav ms-auto">
@@ -12,12 +12,12 @@
             {% if user.is_authenticated %}
 
                 
-                <li class="nav-item"><a class="nav-link" href="">Welcome, dear {{user.get_full_name|title}}</a></li
-                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="">Hoşgeldiniz, {{user.get_full_name|title}}</a></li
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Çıkış</a></li>
             {% else %}
 
-                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Giriş</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Kayıt Ol</a></li>
             
             {% endif %}
 

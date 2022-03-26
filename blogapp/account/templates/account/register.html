@@ -7,14 +7,14 @@
 {% endblock %}
 
 {% block title %} 
-Register
+Kayıt Ol
 {% endblock %}
 
 {% block content %}
 
 <div class="container mt-3">
   <div class="col">
-    <h1>Register</h1>
+    <h1>Kayıt Ol</h1>
     <hr>
       <form method="POST">
         {% csrf_token %}
@@ -24,30 +24,30 @@ Register
             </div>
         {% endif %}
         <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
+            <label for="username" class="form-label">Kullanıcı Adı</label>
             <input type="text" class="form-control" name="username"value="{{username}}">
 
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">E-posta</label>
             <input type="email" class="form-control" name="email"value="{{email}}">
 
             <div class="row">
 
               <div class="col"> 
-            <label for="firstname" class="form-label">First Name</label>
+            <label for="firstname" class="form-label">Ad</label>
             <input type="text" class="form-control" name="firstname" value="{{firstname}}">
               </div>
               <div class="col"> 
-            <label for="lastname" class="form-label">Last Name</label>
+            <label for="lastname" class="form-label">Soyad</label>
             <input type="text" class="form-control" name="lastname"value="{{lastname}}">
           </div>
             </div>
             <div class="row">
               <div class="col">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">Şifre</label>
                 <input type="password" class="form-control" name="password">
             </div>
             <div class="col">
-              <label for="repassword" class="form-label">Re-Password</label>
+              <label for="repassword" class="form-label">Şifre Tekrar</label>
               <input type="password" class="form-control" name="repassword">
             </div>
           </div>
@@ -57,7 +57,7 @@ Register
            
 
         </div>
-        <input type="submit" value="Register" class="btn btn-primary">
+        <input type="submit" value="Kaydol" class="btn btn-primary">
   
       </form>
     </div>
